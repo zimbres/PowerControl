@@ -1,0 +1,14 @@
+[Unit]
+Description=Power Control
+
+[Service]
+Type=notify
+WorkingDirectory=/root
+ExecStart=/root/PowerControl
+SyslogIdentifier=PowerControl
+User=root
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
