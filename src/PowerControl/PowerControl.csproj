@@ -7,7 +7,7 @@
     <UserSecretsId>dotnet-PowerControl-484a4b28-a285-4f59-8177-a7ab04e86774</UserSecretsId>
     <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
     <FileVersion>$(PackageVersion)</FileVersion>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
     <ApplicationIcon>power.ico</ApplicationIcon>
     <Copyright>Zimbres.COM</Copyright>
   </PropertyGroup>
