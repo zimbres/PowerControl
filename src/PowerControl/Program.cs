@@ -1,9 +1,16 @@
 var builder = Host.CreateApplicationBuilder(args);
 
-builder.Services.AddWindowsService(options =>
+if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 {
-    options.ServiceName = "Power Control";
-});
+    builder.Services.AddWindowsService(options =>
+    {
+        options.ServiceName = "Power Control";
+    });
+}
+else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+{
+    builder.Services.AddSystemd();
+}
 
 builder.Services.AddHttpClient("Default")
 .ConfigurePrimaryHttpMessageHandler(() =>
@@ -15,8 +22,8 @@ builder.Services.AddHttpClient("Default")
 });
 
 builder.Services.AddSingleton<HttpService>();
-
 builder.Services.AddSingleton<IamAliveService>();
+builder.Services.AddSingleton<CommandService>();
 
 builder.Services.AddHostedService<Worker>().Configure<HostOptions>(options =>
 {

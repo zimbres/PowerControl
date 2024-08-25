@@ -3,16 +3,16 @@ namespace PowerControl;
 public class Worker : BackgroundService
 {
     private readonly ILogger<Worker> _logger;
-    private readonly HttpService _httpService;
     private readonly Configuration _configuration;
     private readonly IamAliveService _iamAliveService;
+    private readonly CommandService _commandService;
 
-    public Worker(ILogger<Worker> logger, HttpService httpService, IConfiguration configuration, IamAliveService iamAliveService)
+    public Worker(ILogger<Worker> logger, IConfiguration configuration, IamAliveService iamAliveService, CommandService commandService)
     {
         _logger = logger;
-        _httpService = httpService;
         _configuration = configuration.GetSection(nameof(Configuration)).Get<Configuration>();
         _iamAliveService = iamAliveService;
+        _commandService = commandService;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -21,18 +21,8 @@ public class Worker : BackgroundService
 
         while (!stoppingToken.IsCancellationRequested)
         {
-            if (await _httpService.CheckCommandAsync())
-            {
-                try
-                {
-                    _logger.LogWarning("Shutdown!");
-                    Process.Start(_configuration.Command, _configuration.Arguments);
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError("{ex}", ex);
-                }
-            }
+            await _commandService.ExecuteCommandAsync();
+
             if (_configuration.IamAliveEnabled)
             {
                 await _iamAliveService.GetHttpAsync();
