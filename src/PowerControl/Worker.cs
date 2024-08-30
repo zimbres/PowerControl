@@ -17,7 +17,7 @@ public class Worker : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        _logger.LogWarning("Power Control version: {version}.", Assembly.GetExecutingAssembly().GetName().Version.ToString());
+        _logger.LogWarning("Power Control version: {Version}.", Assembly.GetExecutingAssembly().GetName().Version.ToString());
 
         while (!stoppingToken.IsCancellationRequested)
         {

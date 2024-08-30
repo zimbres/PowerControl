@@ -1,0 +1,1 @@
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\.sonarqube\out\0

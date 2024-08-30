@@ -1,0 +1,16 @@
+﻿C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Configurations\Configuration.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\GlobalUsings.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Program.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Services\CommandService.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Services\HttpService.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Services\IamAliveService.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Worker.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\obj\Debug\net8.0\PowerControl.GlobalUsings.g.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\obj\Debug\net8.0\PowerControl.AssemblyInfo.cs
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\appsettings.Development.json
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\appsettings.json
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\power.ico
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Properties\launchSettings.json
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Properties\PublishProfiles\Linux.pubxml
+C:\Users\Marcio\OneDrive\Documents\VSCode\C#\PowerControl\src\PowerControl\Properties\PublishProfiles\Windows.pubxml

@@ -5,7 +5,6 @@ public class HttpService
     private readonly ILogger<HttpService> _logger;
     private readonly Configuration _configuration;
     private readonly IHttpClientFactory _httpClientFactory;
-    private HttpClient _httpClient;
 
     public HttpService(ILogger<HttpService> logger, IHttpClientFactory httpClientFactory, IConfiguration configuration)
     {
@@ -16,7 +15,7 @@ public class HttpService
 
     public async Task<bool> CheckCommandAsync()
     {
-        _httpClient = _httpClientFactory.CreateClient("Default");
+        var _httpClient = _httpClientFactory.CreateClient("Default");
         try
         {
             var response = await _httpClient.GetAsync(_configuration.Url);
@@ -30,7 +29,7 @@ public class HttpService
         }
         catch (Exception ex)
         {
-            _logger.LogWarning("Exception occurred while making HTTP request to {Url}. {ex}", _configuration.Url, ex.Message);
+            _logger.LogWarning(ex, "Exception occurred while making HTTP request to {Url}", _configuration.Url);
             return false;
         }
         return false;

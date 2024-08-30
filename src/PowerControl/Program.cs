@@ -32,4 +32,4 @@ builder.Services.AddHostedService<Worker>().Configure<HostOptions>(options =>
 
 var host = builder.Build();
 
-host.Run();
+await host.RunAsync();

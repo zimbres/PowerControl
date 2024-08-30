@@ -24,7 +24,7 @@ public class CommandService
             }
             catch (Exception ex)
             {
-                _logger.LogError("{ex}", ex);
+                _logger.LogError(ex, "An exception occured.");
             }
         }
     }
