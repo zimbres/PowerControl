@@ -5,3 +5,7 @@ global using System.Diagnostics;
 global using System.Reflection;
 global using System.Runtime.InteropServices;
 global using System.Text.Json;
+global using MQTTnet;
+global using MQTTnet.Protocol;
+global using MQTTnet.Server;
+global using System.Text;

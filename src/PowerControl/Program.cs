@@ -24,6 +24,7 @@ builder.Services.AddHttpClient("Default")
 builder.Services.AddSingleton<HttpService>();
 builder.Services.AddSingleton<IamAliveService>();
 builder.Services.AddSingleton<CommandService>();
+builder.Services.AddSingleton<MqttService>();
 
 builder.Services.AddHostedService<Worker>().Configure<HostOptions>(options =>
 {

@@ -5,7 +5,6 @@ The PowerControl is a background service that monitors commands from an HTTP ser
 ### Configuration required:
 
 ```json
-
 {
   "Logging": {
     "LogLevel": {
@@ -20,10 +19,16 @@ The PowerControl is a background service that monitors commands from an HTTP ser
     "Command": "shutdown",
     "Arguments": "/s /t 60",
     "IamAliveUrl": "https://127.0.0.1/iam_alive",
-    "IamAliveEnabled": true
+    "IamAliveEnabled": false,
+    "UseMqtt": false,
+    "Broker": "127.0.0.1",
+    "Port": 1883,
+    "Topic": "example/topic",
+    "WillTopic": "example/LWT",
+    "Username": "",
+    "Password": ""
   }
 }
-
 ```
 
 ---
